@@ -1,0 +1,144 @@
+<Project>
+  <Name>Sin titulo</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>CAD</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>CAD</Name>
+        <Access>Public</Access>
+        <Location left="2075" top="1352" />
+        <Size width="347" height="196" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public CAD(string url)</Member>
+        <Member type="Method">public void guardar(string[] cadenaDatos, int tamanio)</Member>
+        <Member type="Method">public void guardar(string cadenaInformacion)</Member>
+        <Member type="Method">public string leer()</Member>
+        <Member type="Method">public string leer(string[] cadenaDatos)</Member>
+        <Member type="Method">public void editar(string viejoMsj, string nuevoMsj)</Member>
+        <Member type="Method">public void borrar()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Estudiantes</Name>
+        <Access>Public</Access>
+        <Location left="498" top="129" />
+        <Size width="457" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Nombre nombreCompleto</Member>
+        <Member type="Field">int cedula</Member>
+        <Member type="Field">Fecha fecha_nac</Member>
+        <Member type="Method">public void estudiar()</Member>
+        <Member type="Constructor">public Estudiantes(int ced, Nombre nomCompleto, Fecha fecha_na)</Member>
+        <Member type="Property">public Fecha fecha_nac { get; set; }</Member>
+        <Member type="Property">public int cedula { get; set; }</Member>
+        <Member type="Property">public Nombre nombreCompleto { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Profesor</Name>
+        <Access>Public</Access>
+        <Location left="498" top="571" />
+        <Size width="513" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int cedula</Member>
+        <Member type="Field">string apellido1</Member>
+        <Member type="Field">string apellido2</Member>
+        <Member type="Field">Fecha fecha_contrato</Member>
+        <Member type="Field">float salario</Member>
+        <Member type="Property">public string nombre { get; set; }</Member>
+        <Member type="Property">public string apellido1 { get; set; }</Member>
+        <Member type="Property">public string cedula { get; set; }</Member>
+        <Member type="Property">public string apellido2 { get; set; }</Member>
+        <Member type="Property">public Fecha fecha_contrato { get; set; }</Member>
+        <Member type="Property">public float salario { get; set; }</Member>
+        <Member type="Constructor">public Profesor(int cedula, string nombre, string ap1, string ap2, Fecha fecha_contr, float salario)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Nombre</Name>
+        <Access>Public</Access>
+        <Location left="55" top="10" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string nombre</Member>
+        <Member type="Field">string apellido1</Member>
+        <Member type="Field">string apellido2</Member>
+        <Member type="Constructor">public Nombre(string nobre, string apellido1, string apellido2)</Member>
+        <Member type="Method">public void toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Fecha</Name>
+        <Access>Public</Access>
+        <Location left="55" top="489" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int dia</Member>
+        <Member type="Field">int mes</Member>
+        <Member type="Field">int annio</Member>
+        <Member type="Method">public void toString()</Member>
+        <Member type="Constructor">public Fecha(int dia, int mes, int annio)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Curso</Name>
+        <Access>Public</Access>
+        <Location left="1292" top="1035" />
+        <Size width="690" height="288" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Estudiantes[] estudiantes</Member>
+        <Member type="Field">Profesor profesor</Member>
+        <Member type="Field">string nombreCurso</Member>
+        <Member type="Field">CAD cadCurso</Member>
+        <Member type="Field">int idCurso</Member>
+        <Member type="Field">int[] horario</Member>
+        <Member type="Field">string urlCursotxt</Member>
+        <Member type="Constructor">public Curso(string urlCurso, Estudiantes[] grupo, Profesor profesorCurso, string nombreCurso, int idCurso, int[] horario)</Member>
+        <Member type="Method">public void guardar()</Member>
+        <Member type="Method">public string leer()</Member>
+        <Member type="Method">public void editar()</Member>
+        <Member type="Method">public void borrar()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
