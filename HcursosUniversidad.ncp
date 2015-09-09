@@ -7,7 +7,7 @@
       <Entity type="Class">
         <Name>CAD</Name>
         <Access>Public</Access>
-        <Location left="2077" top="1352" />
+        <Location left="555" top="1635" />
         <Size width="347" height="196" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public CAD(string url)</Member>
@@ -22,8 +22,8 @@
       <Entity type="Class">
         <Name>Estudiantes</Name>
         <Access>Public</Access>
-        <Location left="498" top="129" />
-        <Size width="457" height="264" />
+        <Location left="738" top="571" />
+        <Size width="502" height="315" />
         <Collapsed>False</Collapsed>
         <Member type="Field">Nombre nombreCompleto</Member>
         <Member type="Field">int cedula</Member>
@@ -38,7 +38,7 @@
       <Entity type="Class">
         <Name>Profesor</Name>
         <Access>Public</Access>
-        <Location left="498" top="571" />
+        <Location left="105" top="571" />
         <Size width="513" height="315" />
         <Collapsed>False</Collapsed>
         <Member type="Field">int cedula</Member>
@@ -58,7 +58,7 @@
       <Entity type="Class">
         <Name>Nombre</Name>
         <Access>Public</Access>
-        <Location left="55" top="10" />
+        <Location left="797" top="131" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">string nombre</Member>
@@ -71,7 +71,7 @@
       <Entity type="Class">
         <Name>Fecha</Name>
         <Access>Public</Access>
-        <Location left="55" top="489" />
+        <Location left="363" top="131" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">int dia</Member>
@@ -84,7 +84,7 @@
       <Entity type="Class">
         <Name>Curso</Name>
         <Access>Public</Access>
-        <Location left="1292" top="1033" />
+        <Location left="341" top="1150" />
         <Size width="690" height="288" />
         <Collapsed>False</Collapsed>
         <Member type="Field">Estudiantes[] estudiantes</Member>
@@ -101,53 +101,54 @@
         <Member type="Method">public void borrar()</Member>
         <Modifier>None</Modifier>
       </Entity>
+      <Entity type="Class">
+        <Name>Persona</Name>
+        <Access>Public</Access>
+        <Location left="576" top="205" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Nombre nombreCompleto</Member>
+        <Member type="Field">int edad</Member>
+        <Member type="Field">string cedula</Member>
+        <Modifier>None</Modifier>
+      </Entity>
     </Entities>
     <Relationships>
-      <Relationship type="Association" first="1" second="3">
-        <Label>
-        </Label>
+      <Relationship type="Generalization" first="2" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="3" second="6">
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Composition</AssociationType>
       </Relationship>
-      <Relationship type="Association" first="1" second="4">
-        <Label>
-        </Label>
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Composition</AssociationType>
-      </Relationship>
-      <Relationship type="Association" first="2" second="4">
-        <Label>
-        </Label>
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Composition</AssociationType>
-      </Relationship>
-      <Relationship type="Association" first="5" second="1">
-        <Label>
-        </Label>
+      <Relationship type="Association" first="4" second="6">
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Composition</AssociationType>
       </Relationship>
       <Relationship type="Association" first="5" second="2">
-        <Label>
-        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="1">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Composition</AssociationType>
       </Relationship>
       <Relationship type="Association" first="5" second="0">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
+        <EndOrientation>Vertical</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Composition</AssociationType>
       </Relationship>
