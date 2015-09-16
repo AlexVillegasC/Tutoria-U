@@ -28,6 +28,15 @@ void Color(int color){
 	SetConsoleTextAttribute(hConsole, color | (0 * 0x10 + 0x100));
 }
 
+void pintarFila(int x1, int x2,int y)
+{
+	// Lineas horizontals
+	for (int i = x1; i < x2; i++){
+		gotoxy(i, y); printf("%c", 223);
+		Sleep(1);
+	}
+}
+
 void pintar_marco()       // funcion que pinta los limites del escenario
 {
 	// Lineas horizontals
